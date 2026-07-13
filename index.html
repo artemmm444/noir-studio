@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOIR® — креативная студия</title>
+  <meta name="description" content="NOIR — независимая креативная студия. Брендинг, сайты, айдентика. Москва." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700&family=Onest:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Прелоадер -->
+  <div class="pre" id="pre" aria-hidden="true">
+    <span class="pre__num" id="preNum">000</span>
+    <span class="pre__label">noir® — загрузка</span>
+  </div>
+
+  <!-- Хедер -->
+  <header class="bar" id="bar">
+    <a href="#top" class="bar__logo">NOIR<sup>®</sup></a>
+    <nav class="bar__nav">
+      <a href="#services">услуги</a>
+      <a href="#index">индекс</a>
+      <a href="#contact">контакты</a>
+    </nav>
+    <span class="bar__clock" id="clock">msk 00:00:00</span>
+    <button class="bar__menu" id="menuBtn" aria-label="Меню">меню</button>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <button class="menu__close" id="menuClose" aria-label="Закрыть">закрыть ✕</button>
+    <nav class="menu__nav">
+      <a href="#services">услуги</a>
+      <a href="#index">индекс</a>
+      <a href="#contact">контакты</a>
+    </nav>
+    <p class="menu__meta">hello@noir.studio<br>москва, 55.7558°n</p>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__meta mono">
+        <span>независимая студия</span>
+        <span>москва — 55.7558°n, 37.6173°e</span>
+        <span>©2014–2026</span>
+      </div>
+      <h1 class="hero__display" aria-label="Дизайн, который работает">
+        <span class="hd__line"><span class="hd__in">Дизайн,</span></span>
+        <span class="hd__line hd__line--shift"><span class="hd__in hd__in--ghost">который</span></span>
+        <span class="hd__line"><span class="hd__in">работает<i class="hd__dot"></i></span></span>
+      </h1>
+      <div class="hero__foot">
+        <p class="hero__lede">Брендинг, сайты и айдентика для компаний, которым тесно
+          в шаблонах. Без сеток из стока — вручную, под задачу.</p>
+        <span class="hero__scroll mono">скролл ↓</span>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape__track">
+        <span>брендинг</span><i>✺</i><span class="ghost">сайты</span><i>✺</i><span>айдентика</span><i>✺</i><span class="ghost">motion</span><i>✺</i><span>ux/ui</span><i>✺</i>
+        <span>брендинг</span><i>✺</i><span class="ghost">сайты</span><i>✺</i><span>айдентика</span><i>✺</i><span class="ghost">motion</span><i>✺</i><span>ux/ui</span><i>✺</i>
+      </div>
+    </div>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+      <div class="services__head">
+        <span class="mono label">услуги</span>
+        <span class="mono label">полный цикл</span>
+      </div>
+      <div class="srow reveal">
+        <span class="srow__num mono">01</span>
+        <h2 class="srow__name">Брендинг</h2>
+        <p class="srow__desc">Логотип, айдентика, гайдлайны. Образ, по которому вас узнают без подписи.</p>
+        <span class="srow__arr" aria-hidden="true">→</span>
+      </div>
+      <div class="srow reveal">
+        <span class="srow__num mono">02</span>
+        <h2 class="srow__name">Сайты</h2>
+        <p class="srow__desc">Лендинги, корпоративные сайты, магазины. Дизайн и чистая вёрстка.</p>
+        <span class="srow__arr" aria-hidden="true">→</span>
+      </div>
+      <div class="srow reveal">
+        <span class="srow__num mono">03</span>
+        <h2 class="srow__name">UX/UI</h2>
+        <p class="srow__desc">Интерфейсы, где красота работает на конверсию, а не мешает ей.</p>
+        <span class="srow__arr" aria-hidden="true">→</span>
+      </div>
+      <div class="srow reveal">
+        <span class="srow__num mono">04</span>
+        <h2 class="srow__name">Motion</h2>
+        <p class="srow__desc">Анимация интерфейсов и промо. Микровзаимодействия, которые запоминаются.</p>
+        <span class="srow__arr" aria-hidden="true">→</span>
+      </div>
+      <p class="services__process mono reveal">процесс: исследование → концепция → продакшн → запуск</p>
+    </section>
+
+    <!-- Индекс работ (светлая секция) -->
+    <section class="index" id="index">
+      <div class="index__head">
+        <span class="mono label">индекс</span>
+        <span class="mono label">избранное 2019–2026</span>
+      </div>
+
+      <a href="#contact" class="row reveal" data-a="#c8a96e" data-b="#3a2e1c" data-tag="вела резиденс">
+        <h3 class="row__name">Vela Residences</h3>
+        <span class="row__cat mono">брендинг · сайт</span>
+        <span class="row__year mono">2026</span>
+      </a>
+      <a href="#contact" class="row reveal" data-a="#2b3bea" data-b="#0a0e3f" data-tag="орбит банк">
+        <h3 class="row__name">Orbit Bank</h3>
+        <span class="row__cat mono">ux/ui</span>
+        <span class="row__year mono">2025</span>
+      </a>
+      <a href="#contact" class="row reveal" data-a="#e89bb5" data-b="#4a1f2e" data-tag="люм косметикс">
+        <h3 class="row__name">Lume Cosmetics</h3>
+        <span class="row__cat mono">айдентика</span>
+        <span class="row__year mono">2023</span>
+      </a>
+      <a href="#contact" class="row reveal" data-a="#3fd8c2" data-b="#0e3b34" data-tag="пульс аналитика">
+        <h3 class="row__name">Pulse Analytics</h3>
+        <span class="row__cat mono">сайт · motion</span>
+        <span class="row__year mono">2021</span>
+      </a>
+
+      <!-- Плавающее превью -->
+      <div class="preview" id="preview" aria-hidden="true">
+        <span class="mono" id="previewTag">—</span>
+      </div>
+
+      <div class="index__stats reveal">
+        <div class="stat"><b class="count" data-to="240">0</b><span class="mono">проектов</span></div>
+        <div class="stat"><b class="count" data-to="180">0</b><span class="mono">клиентов</span></div>
+        <div class="stat"><b class="count" data-to="11">0</b><span class="mono">лет</span></div>
+        <div class="stat"><b class="count" data-to="27">0</b><span class="mono">наград</span></div>
+      </div>
+    </section>
+
+    <!-- Контакт -->
+    <section class="contact" id="contact">
+      <div class="contact__head mono label">давайте работать</div>
+      <h2 class="contact__display">
+        <span>Расска-</span><br>
+        <span class="ghost">жите о</span><br>
+        <span>проекте</span>
+      </h2>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <a href="mailto:hello@noir.studio" class="contact__mail">hello@noir.studio</a>
+          <p class="mono">+7 900 000-00-00<br>москва / удалённо</p>
+        </div>
+        <form class="form" id="form" novalidate>
+          <div class="field">
+            <label class="mono" for="fName">имя</label>
+            <input id="fName" type="text" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label class="mono" for="fMail">email</label>
+            <input id="fMail" type="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label class="mono" for="fMsg">о проекте</label>
+            <textarea id="fMsg" name="msg" rows="2"></textarea>
+          </div>
+          <button type="submit" class="form__btn">отправить →</button>
+          <p class="form__note mono" id="formNote" hidden>принято — ответим в течение дня</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot mono">
+    <span>©2026 noir®</span>
+    <span>вручную, без шаблонов</span>
+    <a href="#top">наверх ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

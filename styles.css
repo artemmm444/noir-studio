@@ -263,6 +263,11 @@ body::after{
 .form__note{color:var(--blue)}
 
 /* ---------- Футер ---------- */
+.foot__giant{font-family:var(--disp);font-weight:700;text-align:center;
+  font-size:clamp(90px,20vw,300px);line-height:.8;letter-spacing:-.02em;
+  -webkit-text-stroke:1px rgba(232,227,217,.22);color:transparent;
+  user-select:none;padding:60px var(--pad) 0;overflow:hidden}
+.foot__giant sup{font-size:.28em;-webkit-text-stroke:1px rgba(232,227,217,.22)}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   padding:22px var(--pad);border-top:1px solid var(--hair-d);color:var(--mut-d)}
 .foot a{transition:color .25s}

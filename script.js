@@ -179,6 +179,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Параллакс hero от мыши ---
+  const heroDisplay = document.querySelector('.hero__display');
+  if (heroDisplay && fine && !reduce) {
+    const lines = heroDisplay.querySelectorAll('.hd__line');
+    let px = 0, py = 0, cx = 0, cy = 0, praf = 0;
+    const ploop = () => {
+      cx += (px - cx) * 0.06;
+      cy += (py - cy) * 0.06;
+      lines.forEach((l, i) => {
+        const depth = (i + 1) * 3;
+        l.style.transform = `translate(${cx * depth}px,${cy * depth * 0.6}px)`;
+      });
+      praf = (Math.abs(px - cx) > .001 || Math.abs(py - cy) > .001) ? requestAnimationFrame(ploop) : 0;
+    };
+    document.querySelector('.hero').addEventListener('pointermove', (e) => {
+      px = e.clientX / innerWidth - .5;
+      py = e.clientY / innerHeight - .5;
+      if (!praf) praf = requestAnimationFrame(ploop);
+    });
+  }
+
   // --- Форма (заглушка) ---
   const form = document.getElementById('form');
   form.addEventListener('submit', (e) => {

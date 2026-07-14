@@ -144,17 +144,80 @@ body::after{
   .row:hover .row__name{color:var(--blue)}
 }
 
-/* Плавающее превью */
-.preview{position:absolute;top:0;left:0;width:min(320px,34vw);aspect-ratio:4/3;
+/* Плавающее превью: мини-макеты */
+.preview{position:absolute;top:0;left:0;width:min(340px,36vw);aspect-ratio:4/3;
   z-index:3;pointer-events:none;opacity:0;scale:.92;
   transition:opacity .3s ease,scale .4s var(--ease);
-  background:
-    radial-gradient(120% 120% at 25% 15%,var(--a,#888),transparent 60%),
-    linear-gradient(155deg,var(--b,#222),#0f0f10 85%);
-  border:1px solid var(--ink);display:flex;align-items:flex-end;padding:14px}
+  border:1px solid var(--ink);box-shadow:14px 18px 0 rgba(15,15,16,.12)}
 .preview.on{opacity:1;scale:1}
-.preview .mono{color:var(--bone)}
 @media (hover:none){.preview{display:none}}
+
+.shot{display:none;flex-direction:column;position:absolute;inset:0;font-family:var(--body)}
+.preview[data-p="vela"] .shot--vela,
+.preview[data-p="orbit"] .shot--orbit,
+.preview[data-p="lume"] .shot--lume,
+.preview[data-p="pulse"] .shot--pulse{display:flex}
+
+.shot__bar{display:flex;align-items:center;gap:5px;padding:7px 10px;flex:none;
+  background:rgba(15,15,16,.08);border-bottom:1px solid rgba(15,15,16,.12)}
+.shot__bar i{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.35}
+.shot__bar span{font-family:var(--mono);font-size:9px;letter-spacing:.05em;opacity:.6;
+  margin-left:8px;padding:2px 10px;background:rgba(255,255,255,.35);border-radius:20px}
+.shot__body{flex:1;position:relative;overflow:hidden;display:flex;flex-direction:column}
+
+/* Vela — недвижимость */
+.shot--vela{background:#1b1510;color:#d8c29a}
+.shot--vela .shot__bar{background:rgba(216,194,154,.08);border-color:rgba(216,194,154,.15)}
+.shot--vela .shot__bar span{background:rgba(216,194,154,.12)}
+.vela__nav{display:flex;justify-content:space-between;align-items:baseline;padding:12px 14px 0}
+.vela__nav b{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.14em}
+.vela__nav span{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;opacity:.55}
+.vela__title{font-family:var(--disp);font-weight:300;font-size:24px;line-height:1.05;
+  text-transform:uppercase;letter-spacing:.02em;padding:16px 14px 0}
+.vela__towers{display:flex;align-items:flex-end;gap:6px;flex:1;padding:0 14px}
+.vela__towers i{flex:1;height:var(--h);background:linear-gradient(rgba(216,194,154,.28),rgba(216,194,154,.08));
+  border-top:1px solid rgba(216,194,154,.6)}
+
+/* Orbit — финтех */
+.shot--orbit{background:#e9ecf4;color:#131a4d}
+.orbit__card{margin:auto;width:72%;background:#fff;border-radius:14px;padding:16px 18px;
+  box-shadow:0 12px 30px rgba(19,26,77,.14)}
+.orbit__label{font-family:var(--mono);font-size:8px;letter-spacing:.08em;color:#8a90b8}
+.orbit__sum{display:block;font-family:var(--disp);font-weight:500;font-size:20px;margin:4px 0 12px}
+.orbit__chart{display:flex;align-items:flex-end;gap:4px;height:44px}
+.orbit__chart i{flex:1;height:var(--h);background:#dfe3f2;border-radius:3px}
+.orbit__chart i:nth-child(4){background:var(--blue)}
+.orbit__btns{display:flex;gap:6px;margin-top:12px}
+.orbit__btns i{width:26px;height:26px;border-radius:50%;background:#eef0f7}
+.orbit__btns i.on{background:var(--blue)}
+
+/* Lume — косметика */
+.shot--lume{background:#eadcd3;color:#6c4a3f}
+.lume__mark{font-family:var(--disp);font-weight:500;font-size:14px;padding:12px 14px 0;
+  letter-spacing:.04em}
+.lume__mark sup{font-size:.5em;font-weight:300}
+.lume__bottles{display:flex;align-items:flex-end;justify-content:center;gap:14px;flex:1;
+  padding-bottom:18px}
+.lume__b{border-radius:8px 8px 3px 3px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 22px rgba(108,74,63,.25)}
+.lume__b span{font-family:var(--mono);font-size:6.5px;letter-spacing:.12em;text-align:center;
+  line-height:1.8;text-transform:uppercase;background:#f6ece5;padding:8px 10px;
+  border-radius:2px;color:#6c4a3f}
+.lume__b--tall{width:64px;height:118px;background:#c9a191}
+.lume__b--short{width:74px;height:86px;background:#a97f6f}
+
+/* Pulse — дашборд */
+.shot--pulse{background:#0b1417;color:#3fd8c2}
+.shot--pulse .shot__bar{background:rgba(63,216,194,.07);border-color:rgba(63,216,194,.14)}
+.shot--pulse .shot__bar span{background:rgba(63,216,194,.1)}
+.pulse__kpi{display:flex;gap:18px;padding:14px 16px 6px}
+.pulse__kpi span{display:flex;flex-direction:column}
+.pulse__kpi b{font-family:var(--disp);font-weight:500;font-size:15px}
+.pulse__kpi i{font-style:normal;font-family:var(--mono);font-size:7.5px;letter-spacing:.08em;
+  opacity:.55;margin-top:3px}
+.pulse__graph{flex:1;width:100%;padding:6px 0 0}
+.pulse__graph polyline{stroke:#3fd8c2;stroke-width:1.4;fill:none;
+  vector-effect:non-scaling-stroke}
 
 /* Статы */
 .index__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;

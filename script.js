@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Индекс: превью следует за курсором ---
   const index = document.getElementById('index');
   const preview = document.getElementById('preview');
-  const previewTag = document.getElementById('previewTag');
   if (fine && !reduce) {
     let tx = 0, ty = 0, x = 0, y = 0, raf = 0;
     const loop = () => {
@@ -92,9 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelectorAll('.row').forEach(row => {
       row.addEventListener('pointerenter', () => {
-        preview.style.setProperty('--a', row.dataset.a);
-        preview.style.setProperty('--b', row.dataset.b);
-        previewTag.textContent = row.dataset.tag;
+        preview.dataset.p = row.dataset.p;
         preview.classList.add('on');
       });
       row.addEventListener('pointerleave', () => preview.classList.remove('on'));
